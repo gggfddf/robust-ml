@@ -1,7 +1,7 @@
 {
   "report_type": "technical_analysis",
   "symbol": "RELIANCE.NS",
-  "timestamp": "2025-07-23T07:57:43.016691",
+  "timestamp": "2025-07-23T08:09:00.388934",
   "current_price": 1412.800048828125,
   "indicators": {
     "sma_5": 1455.8800048828125,
@@ -108,20 +108,10 @@
       }
     }
   },
-  "predictions": {
-    "movement_direction": "75.5% chance up",
-    "target_price": 2500.0,
-    "confidence_percentage": 75.5,
-    "time_horizon": "5 days",
-    "risk_assessment": {
-      "stop_loss": 2400.0,
-      "risk_reward_ratio": 2.5,
-      "max_loss": 100.0
-    }
-  },
+  "predictions": {},
   "summary": {
     "total_indicators": 61,
     "significant_patterns": 0,
-    "prediction_confidence": 75.5
+    "prediction_confidence": 0
   }
 }

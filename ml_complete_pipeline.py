@@ -2,6 +2,7 @@
 """
 ULTIMATE MARKET AI ENGINE - COMPLETE ML PIPELINE
 Comprehensive Machine Learning Pipeline for Reliance Industries Analysis
+Production-Grade Implementation with Full Feature Set
 """
 
 import sys
@@ -141,7 +142,7 @@ class CompleteMLPipeline:
         for tf in timeframes:
             print(f"  📊 Loading {tf} data...")
             try:
-                data = self.data_loader.fetch_single_timeframe_data(tf)
+                data = self.data_loader.fetch_single_timeframe_data(self.symbol, tf)
                 if data is not None and len(data) > 0:
                     data_dict[tf] = data
                     print(f"    ✅ {tf}: {len(data)} records loaded")

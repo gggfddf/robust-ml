@@ -183,33 +183,91 @@ class MLCandlestickDiscovery:
         features = []
         
         for seq in sequences:
-            # Statistical features
-            seq_mean = np.mean(seq, axis=0)
-            seq_std = np.std(seq, axis=0)
-            seq_min = np.min(seq, axis=0)
-            seq_max = np.max(seq, axis=0)
-            
-            # Trend features
-            seq_trend = np.polyfit(range(len(seq)), seq[:, 0], 1)[0] if len(seq) > 1 else 0
-            
-            # Volatility features
-            seq_volatility = np.std(seq[:, 0]) if len(seq) > 1 else 0
-            
-            # Pattern shape features
-            seq_start = seq[0]
-            seq_end = seq[-1]
-            seq_mid = seq[len(seq)//2] if len(seq) > 2 else seq[0]
-            
-            # Combine all features
-            seq_features = np.concatenate([
-                seq_mean, seq_std, seq_min, seq_max,
-                [seq_trend, seq_volatility],
-                seq_start, seq_end, seq_mid
-            ])
-            
-            features.append(seq_features)
+            try:
+                # Ensure sequence is 2D
+                if seq.ndim == 1:
+                    seq = seq.reshape(-1, 1)
+                
+                # Get sequence dimensions
+                seq_length, n_features = seq.shape
+                
+                # Statistical features (fixed size regardless of sequence length)
+                seq_mean = np.mean(seq, axis=0)
+                seq_std = np.std(seq, axis=0)
+                seq_min = np.min(seq, axis=0)
+                seq_max = np.max(seq, axis=0)
+                
+                # Trend features (using first feature for trend calculation)
+                if seq_length > 1:
+                    seq_trend = np.polyfit(range(seq_length), seq[:, 0], 1)[0]
+                    seq_volatility = np.std(seq[:, 0])
+                else:
+                    seq_trend = 0.0
+                    seq_volatility = 0.0
+                
+                # Pattern shape features (fixed size)
+                seq_start = seq[0] if seq_length > 0 else np.zeros(n_features)
+                seq_end = seq[-1] if seq_length > 0 else np.zeros(n_features)
+                seq_mid = seq[seq_length//2] if seq_length > 2 else seq[0] if seq_length > 0 else np.zeros(n_features)
+                
+                # Additional fixed-size features
+                seq_range = seq_max - seq_min
+                seq_median = np.median(seq, axis=0)
+                seq_skew = stats.skew(seq, axis=0) if seq_length > 2 else np.zeros(n_features)
+                seq_kurtosis = stats.kurtosis(seq, axis=0) if seq_length > 3 else np.zeros(n_features)
+                
+                # Combine all features into a fixed-size vector
+                seq_features = np.concatenate([
+                    seq_mean,           # n_features
+                    seq_std,            # n_features
+                    seq_min,            # n_features
+                    seq_max,            # n_features
+                    seq_range,          # n_features
+                    seq_median,         # n_features
+                    seq_skew,           # n_features
+                    seq_kurtosis,       # n_features
+                    seq_start,          # n_features
+                    seq_end,            # n_features
+                    seq_mid,            # n_features
+                    [seq_trend, seq_volatility, seq_length]  # 3 scalar features
+                ])
+                
+                # Ensure no NaN or infinite values
+                seq_features = np.nan_to_num(seq_features, nan=0.0, posinf=0.0, neginf=0.0)
+                
+                features.append(seq_features)
+                
+            except Exception as e:
+                logger.warning(f"Error processing sequence: {e}")
+                continue
         
-        return np.array(features)
+        if not features:
+            return np.array([])
+        
+        # Convert to numpy array and ensure all features have the same length
+        features_array = np.array(features)
+        
+        # Validate feature matrix
+        if features_array.size == 0:
+            return np.array([])
+        
+        # Ensure all rows have the same number of features
+        feature_lengths = [len(f) for f in features]
+        if len(set(feature_lengths)) > 1:
+            logger.warning(f"Inconsistent feature lengths: {set(feature_lengths)}")
+            # Pad shorter features with zeros
+            max_length = max(feature_lengths)
+            padded_features = []
+            for f in features:
+                if len(f) < max_length:
+                    padded = np.pad(f, (0, max_length - len(f)), 'constant')
+                    padded_features.append(padded)
+                else:
+                    padded_features.append(f)
+            features_array = np.array(padded_features)
+        
+        logger.info(f"Extracted {len(features_array)} feature vectors with {features_array.shape[1]} features each")
+        return features_array
     
     def _apply_clustering(self, features: np.ndarray, algorithm: str = 'kmeans') -> Tuple[np.ndarray, Any]:
         """
