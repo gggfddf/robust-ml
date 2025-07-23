@@ -1,0 +1,64 @@
+{
+  "report_type": "price_action_analysis",
+  "symbol": "RELIANCE.NS",
+  "timestamp": "2025-07-23T07:35:31.148155",
+  "price_data": {
+    "current_price": 1412.800048828125,
+    "price_change": -0.011059727724923252,
+    "high": 1431.9000244140625,
+    "low": 1410.699951171875,
+    "volume": 20396320.0
+  },
+  "patterns": {
+    "1m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "5m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "15m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "1d": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "1w": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    }
+  },
+  "summary": {
+    "total_patterns": 0,
+    "timeframes_analyzed": [
+      "1m",
+      "5m",
+      "15m",
+      "1d",
+      "1w"
+    ]
+  }
+}

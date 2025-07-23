@@ -418,7 +418,7 @@ class TechnicalAnalyzer:
     def _calculate_ultimate_oscillator(self, df: pd.DataFrame, period1: int = 7, period2: int = 14, period3: int = 28) -> pd.Series:
         """Calculate Ultimate Oscillator."""
         tr = self._calculate_true_range(df)
-        bp = df['Close'] - df[['Low', 'Close'].shift(1)].min(axis=1)
+        bp = df['Close'] - df[['Low', 'Close']].shift(1).min(axis=1)
         
         avg7 = bp.rolling(period1).sum() / tr.rolling(period1).sum()
         avg14 = bp.rolling(period2).sum() / tr.rolling(period2).sum()
@@ -602,9 +602,14 @@ class TechnicalAnalyzer:
         if len(series) < 20:
             return {}
         
+        # Clean the series and get valid indices
+        clean_series = series.dropna()
+        if len(clean_series) < 10:
+            return {}
+        
         # Linear regression trend
-        x = np.arange(len(series))
-        slope, intercept, r_value, p_value, std_err = stats.linregress(x, series.dropna())
+        x = np.arange(len(clean_series))
+        slope, intercept, r_value, p_value, std_err = stats.linregress(x, clean_series.values)
         
         # Moving average trend
         ma_short = series.rolling(10).mean()
@@ -614,7 +619,7 @@ class TechnicalAnalyzer:
             'slope': slope,
             'r_squared': r_value ** 2,
             'p_value': p_value,
-            'trend_strength': abs(slope) / series.std() if series.std() > 0 else 0,
+            'trend_strength': abs(slope) / clean_series.std() if clean_series.std() > 0 else 0,
             'ma_trend': 'up' if ma_short.iloc[-1] > ma_long.iloc[-1] else 'down'
         }
     

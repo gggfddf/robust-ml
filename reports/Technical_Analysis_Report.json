@@ -1,0 +1,117 @@
+{
+  "report_type": "technical_analysis",
+  "symbol": "RELIANCE.NS",
+  "timestamp": "2025-07-23T07:35:31.086556",
+  "current_price": 1412.800048828125,
+  "indicators": {
+    "sma_5": 1455.8800048828125,
+    "ema_5": 1447.9143020972867,
+    "sma_10": 1477.989990234375,
+    "ema_10": 1468.0265764928597,
+    "sma_20": 1496.4950073242187,
+    "ema_20": 1476.5869463553313,
+    "sma_50": 1458.8940087890626,
+    "ema_50": 1449.1864721013415,
+    "sma_200": 1324.717001953125,
+    "ema_200": 1373.1701174811733,
+    "bb_upper": 1563.9950074453961,
+    "bb_middle": 1496.4950073242187,
+    "bb_lower": 1428.9950072030413,
+    "bb_width": 0.09021079227236396,
+    "bb_position": -0.11996265441364988,
+    "vwap": 1486.6618873659852,
+    "parabolic_sar": 1227.5999755859375,
+    "tenkan_sen": 1467.699951171875,
+    "kijun_sen": 1480.8499755859375,
+    "senkou_span_a": 1434.7249755859375,
+    "senkou_span_b": 1291.7249755859375,
+    "chikou_span": NaN,
+    "rsi": 16.284976805080376,
+    "macd_line": -2.0348680811680424,
+    "macd_signal": 11.698570864390105,
+    "macd_histogram": -13.733438945558147,
+    "stoch_k": 1.496861671675347,
+    "stoch_d": 4.740677044049014,
+    "williams_r": -98.50313832832465,
+    "cci": -212.0200395051562,
+    "adx": NaN,
+    "plus_di": NaN,
+    "minus_di": NaN,
+    "momentum": -0.08116540630813596,
+    "roc": -8.116540630813596,
+    "atr": 22.228585379464285,
+    "historical_volatility": 0.194890357277348,
+    "chaikin_volatility": 20.04221336482656,
+    "obv": 293061529.0,
+    "ad_line": -290055726.70960003,
+    "mfi": 27.2181449232814,
+    "volume_roc": 184.41748250412306,
+    "ultimate_oscillator": -8.365855874349517,
+    "trix": 0.12495575107658308,
+    "kst": 25.090246146867276,
+    "tsi": -1.7131681331987818,
+    "pivot": 1418.4666748046875,
+    "r1": 1426.2333984375,
+    "r2": 1439.666748046875,
+    "s1": 1405.0333251953125,
+    "s2": 1397.2666015625,
+    "fib_236": 1517.8891884765626,
+    "fib_382": 1497.4053813476562,
+    "fib_500": 1480.8499755859375,
+    "fib_618": 1464.2945698242188,
+    "fib_786": 1440.7241616210938,
+    "zigzag": 1428.5999755859375,
+    "trend_strength": NaN,
+    "volatility_composite": 0.0702080222189161,
+    "momentum_composite": -0.7527196512587002,
+    "volume_composite": 0.6837624978955263
+  },
+  "patterns": {
+    "1m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "5m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "15m": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "1d": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    },
+    "1w": {
+      "dbscan": {
+        "clusters": {},
+        "performance": {},
+        "significant_patterns": {},
+        "model": "DBSCAN()"
+      }
+    }
+  },
+  "predictions": {},
+  "summary": {
+    "total_indicators": 61,
+    "significant_patterns": 0,
+    "prediction_confidence": 0
+  }
+}

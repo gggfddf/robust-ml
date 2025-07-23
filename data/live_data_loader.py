@@ -378,25 +378,25 @@ class DataLoader:
             # 1-minute data - last 7 days (yfinance limit)
             start_date = end_date - timedelta(days=7)
         elif timeframe == '5m':
-            # 5-minute data - last 60 days
-            start_date = end_date - timedelta(days=60)
+            # 5-minute data - last 30 days (yfinance limit)
+            start_date = end_date - timedelta(days=30)
         elif timeframe == '15m':
-            # 15-minute data - last 60 days
-            start_date = end_date - timedelta(days=60)
+            # 15-minute data - last 30 days (yfinance limit)
+            start_date = end_date - timedelta(days=30)
         elif timeframe == '30m':
-            # 30-minute data - last 60 days
-            start_date = end_date - timedelta(days=60)
+            # 30-minute data - last 30 days (yfinance limit)
+            start_date = end_date - timedelta(days=30)
         elif timeframe == '1h':
-            # Hourly data - last 2 years
+            # Hourly data - last 730 days
             start_date = end_date - timedelta(days=730)
         elif timeframe == '1d':
-            # Daily data - last 2 years
+            # Daily data - last 730 days
             start_date = end_date - timedelta(days=730)
         elif timeframe == '1w':
-            # Weekly data - last 5 years
+            # Weekly data - last 1825 days
             start_date = end_date - timedelta(days=1825)
         else:
-            # Default to 2 years
+            # Default to 730 days
             start_date = end_date - timedelta(days=730)
         
         return start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')

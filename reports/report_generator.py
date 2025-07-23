@@ -75,17 +75,17 @@ class ReportGenerator:
         <head>
             <title>Technical Analysis Report</title>
             <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                .header { background-color: #366092; color: white; padding: 20px; text-align: center; }
-                .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
-                .indicator { margin: 10px 0; padding: 10px; background-color: #f9f9f9; }
-                .signal { font-weight: bold; }
-                .bullish { color: green; }
-                .bearish { color: red; }
-                .neutral { color: orange; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #4472C4; color: white; }
+                body {{ font-family: Arial, sans-serif; margin: 20px; }}
+                .header {{ background-color: #366092; color: white; padding: 20px; text-align: center; }}
+                .section {{ margin: 20px 0; padding: 15px; border: 1px solid #ddd; }}
+                .indicator {{ margin: 10px 0; padding: 10px; background-color: #f9f9f9; }}
+                .signal {{ font-weight: bold; }}
+                .bullish {{ color: green; }}
+                .bearish {{ color: red; }}
+                .neutral {{ color: orange; }}
+                table {{ width: 100%; border-collapse: collapse; }}
+                th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+                th {{ background-color: #4472C4; color: white; }}
             </style>
         </head>
         <body>
@@ -106,16 +106,16 @@ class ReportGenerator:
         <head>
             <title>Price Action Analysis Report</title>
             <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                .header { background-color: #70AD47; color: white; padding: 20px; text-align: center; }
-                .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
-                .pattern { margin: 10px 0; padding: 10px; background-color: #f9f9f9; }
-                .performance { font-weight: bold; }
-                .positive { color: green; }
-                .negative { color: red; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #70AD47; color: white; }
+                body {{ font-family: Arial, sans-serif; margin: 20px; }}
+                .header {{ background-color: #70AD47; color: white; padding: 20px; text-align: center; }}
+                .section {{ margin: 20px 0; padding: 15px; border: 1px solid #ddd; }}
+                .pattern {{ margin: 10px 0; padding: 10px; background-color: #f9f9f9; }}
+                .performance {{ font-weight: bold; }}
+                .positive {{ color: green; }}
+                .negative {{ color: red; }}
+                table {{ width: 100%; border-collapse: collapse; }}
+                th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+                th {{ background-color: #70AD47; color: white; }}
             </style>
         </head>
         <body>
@@ -136,16 +136,16 @@ class ReportGenerator:
         <head>
             <title>Market Analysis Summary</title>
             <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                .header { background-color: #C5504B; color: white; padding: 20px; text-align: center; }
-                .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
-                .prediction { font-size: 18px; font-weight: bold; margin: 10px 0; }
-                .bullish { color: green; }
-                .bearish { color: red; }
-                .neutral { color: orange; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #C5504B; color: white; }
+                body {{ font-family: Arial, sans-serif; margin: 20px; }}
+                .header {{ background-color: #C5504B; color: white; padding: 20px; text-align: center; }}
+                .section {{ margin: 20px 0; padding: 15px; border: 1px solid #ddd; }}
+                .prediction {{ font-size: 18px; font-weight: bold; margin: 10px 0; }}
+                .bullish {{ color: green; }}
+                .bearish {{ color: red; }}
+                .neutral {{ color: orange; }}
+                table {{ width: 100%; border-collapse: collapse; }}
+                th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+                th {{ background-color: #C5504B; color: white; }}
             </style>
         </head>
         <body>
@@ -275,7 +275,16 @@ class ReportGenerator:
         # Auto-adjust column widths
         for column in ws.columns:
             max_length = 0
-            column_letter = column[0].column_letter
+            # Find the first non-merged cell to get column letter
+            column_letter = None
+            for cell in column:
+                if hasattr(cell, 'column_letter'):
+                    column_letter = cell.column_letter
+                    break
+            
+            if column_letter is None:
+                continue
+                
             for cell in column:
                 try:
                     if len(str(cell.value)) > max_length:
@@ -361,7 +370,16 @@ class ReportGenerator:
         # Auto-adjust column widths
         for column in ws.columns:
             max_length = 0
-            column_letter = column[0].column_letter
+            # Find the first non-merged cell to get column letter
+            column_letter = None
+            for cell in column:
+                if hasattr(cell, 'column_letter'):
+                    column_letter = cell.column_letter
+                    break
+            
+            if column_letter is None:
+                continue
+                
             for cell in column:
                 try:
                     if len(str(cell.value)) > max_length:
