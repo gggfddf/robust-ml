@@ -319,3 +319,22 @@
 2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
 2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
 2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 09:19:10,238 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 09:19:10,534 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 09:19:10,615 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,615 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 09:19:10,726 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 09:19:10,731 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 09:19:10,732 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 09:19:10,732 - data.live_data_loader - ERROR - Failed to fetch data for 1d
