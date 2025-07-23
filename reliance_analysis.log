@@ -1366,3 +1366,267 @@
 2025-07-23 07:35:31,149 - INFO - [07:35:31] 100% - Analysis completed
 2025-07-23 07:35:31,149 - INFO - Complete analysis finished in 0:01:20.867964
 2025-07-23 07:35:31,149 - INFO - Analyzed 5 timeframes: ['1m', '5m', '15m', '1d', '1w']
+2025-07-23 07:55:00,142 - INFO - Starting comprehensive system validation...
+2025-07-23 07:55:00,142 - INFO - Validating configuration system...
+2025-07-23 07:55:00,144 - INFO - Symbol updated to: TCS.NS
+2025-07-23 07:55:00,144 - INFO - Symbol updated to: RELIANCE.NS
+2025-07-23 07:55:00,144 - INFO - Validating data loading system...
+2025-07-23 07:55:00,147 - INFO - Installing scikit-learn...
+2025-07-23 07:55:00,346 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:55:00,346 - INFO - Installing tensorflow...
+2025-07-23 07:55:00,543 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:55:00,543 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:55:00,543 - INFO - Getting latest data for RELIANCE.NS
+2025-07-23 07:55:00,543 - INFO - Fetching 1m data for RELIANCE.NS from 2025-07-16 to 2025-07-23
+2025-07-23 07:55:00,725 - INFO - Successfully fetched 1873 records for RELIANCE.NS (1m)
+2025-07-23 07:55:00,733 - INFO - Fetching 5m data for RELIANCE.NS from 2025-06-23 to 2025-07-23
+2025-07-23 07:55:00,813 - INFO - Successfully fetched 1650 records for RELIANCE.NS (5m)
+2025-07-23 07:55:00,823 - INFO - Fetching 15m data for RELIANCE.NS from 2025-06-23 to 2025-07-23
+2025-07-23 07:55:00,891 - INFO - Successfully fetched 550 records for RELIANCE.NS (15m)
+2025-07-23 07:55:00,896 - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 07:55:01,046 - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 07:55:01,050 - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 07:55:01,136 - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 07:55:01,141 - INFO - Validating technical analysis system...
+2025-07-23 07:55:01,175 - INFO - Installing scikit-learn...
+2025-07-23 07:55:01,380 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:55:01,381 - INFO - Installing tensorflow...
+2025-07-23 07:55:01,576 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:55:01,576 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:55:01,576 - INFO - Technical Analyzer initialized
+2025-07-23 07:55:01,577 - INFO - Calculating all technical indicators...
+2025-07-23 07:55:01,749 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:55:01,749 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:55:01,749 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:55:01,750 - INFO - Validating pattern discovery system...
+2025-07-23 07:55:01,814 - INFO - Installing scikit-learn...
+2025-07-23 07:55:02,010 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:55:02,010 - INFO - Installing tensorflow...
+2025-07-23 07:55:02,202 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:55:02,203 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:55:02,203 - INFO - ML Candlestick Discovery initialized
+2025-07-23 07:55:02,203 - INFO - Starting pattern discovery for 5 timeframes
+2025-07-23 07:55:02,203 - INFO - Discovering patterns for 1m timeframe
+2025-07-23 07:55:04,331 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:55:06,281 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:55:06,283 - ERROR - Error in kmeans clustering for 1m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:55:06,351 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:55:06,352 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:55:19,892 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:55:19,911 - ERROR - Error in gmm clustering for 1m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:55:19,911 - INFO - Discovering patterns for 5m timeframe
+2025-07-23 07:55:22,074 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:55:24,044 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:55:24,046 - ERROR - Error in kmeans clustering for 5m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:55:24,116 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:55:24,116 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:55:35,861 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:55:35,878 - ERROR - Error in gmm clustering for 5m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:55:35,879 - INFO - Discovering patterns for 15m timeframe
+2025-07-23 07:55:37,917 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:55:39,867 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:55:39,869 - ERROR - Error in kmeans clustering for 15m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:55:39,942 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:55:39,942 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:55:52,170 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:55:52,186 - ERROR - Error in gmm clustering for 15m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:55:52,186 - INFO - Discovering patterns for 1d timeframe
+2025-07-23 07:55:54,261 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:55:56,322 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:55:56,324 - ERROR - Error in kmeans clustering for 1d: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:55:56,399 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:55:56,399 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:56:08,478 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:56:08,486 - ERROR - Error in gmm clustering for 1d: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:56:08,486 - INFO - Discovering patterns for 1w timeframe
+2025-07-23 07:56:10,544 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:56:12,496 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:56:12,502 - ERROR - Error in kmeans clustering for 1w: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:56:12,582 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:56:12,582 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:56:22,679 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:56:22,700 - ERROR - Error in gmm clustering for 1w: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:56:22,700 - INFO - Pattern discovery completed. Total significant patterns: 0
+2025-07-23 07:56:22,728 - INFO - Validating deep learning system...
+2025-07-23 07:56:22,740 - INFO - Installing scikit-learn...
+2025-07-23 07:56:23,002 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:56:23,003 - INFO - Installing tensorflow...
+2025-07-23 07:56:23,201 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:56:23,201 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:56:23,201 - INFO - Technical Analyzer initialized
+2025-07-23 07:56:23,205 - INFO - Deep Learning Ensemble initialized on cpu
+2025-07-23 07:56:23,206 - INFO - Calculating all technical indicators...
+2025-07-23 07:56:23,379 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:56:23,379 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:56:23,379 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:56:23,379 - WARNING - Models not trained. Run train_ensemble() first.
+2025-07-23 07:56:23,380 - INFO - Validating time analysis system...
+2025-07-23 07:56:23,382 - INFO - Installing scikit-learn...
+2025-07-23 07:56:23,618 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:56:23,619 - INFO - Installing tensorflow...
+2025-07-23 07:56:23,814 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:56:23,815 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:56:23,815 - INFO - Temporal Analyzer initialized
+2025-07-23 07:56:23,815 - INFO - Starting comprehensive temporal pattern analysis...
+2025-07-23 07:56:23,823 - INFO - Analyzing intraday patterns...
+2025-07-23 07:56:23,826 - INFO - Analyzing day-of-week patterns...
+2025-07-23 07:56:23,832 - INFO - Analyzing monthly patterns...
+2025-07-23 07:56:23,837 - INFO - Analyzing seasonal patterns...
+2025-07-23 07:56:23,841 - INFO - Analyzing gap patterns...
+2025-07-23 07:56:23,899 - INFO - Analyzing expiry patterns...
+2025-07-23 07:56:23,903 - INFO - Analyzing special event patterns...
+2025-07-23 07:56:23,905 - INFO - Detecting market cycles...
+2025-07-23 07:56:23,910 - INFO - Temporal pattern analysis completed
+2025-07-23 07:56:23,910 - INFO - Validating visualization system...
+2025-07-23 07:56:23,998 - INFO - Installing scikit-learn...
+2025-07-23 07:56:24,210 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:56:24,211 - INFO - Installing tensorflow...
+2025-07-23 07:56:24,424 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:56:24,424 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:56:24,424 - INFO - Technical Analyzer initialized
+2025-07-23 07:56:24,424 - INFO - Candlestick Visualizer initialized
+2025-07-23 07:56:24,425 - INFO - Calculating all technical indicators...
+2025-07-23 07:56:24,592 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:56:24,593 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:56:24,593 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:56:24,593 - INFO - Creating comprehensive candlestick chart...
+2025-07-23 07:56:24,881 - INFO - Candlestick chart created successfully
+2025-07-23 07:56:24,882 - INFO - Validating report generation system...
+2025-07-23 07:56:24,884 - INFO - Installing scikit-learn...
+2025-07-23 07:56:25,081 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:56:25,082 - INFO - Installing tensorflow...
+2025-07-23 07:56:25,289 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:56:25,289 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:56:25,289 - INFO - Technical Analyzer initialized
+2025-07-23 07:56:25,289 - INFO - ML Candlestick Discovery initialized
+2025-07-23 07:56:25,290 - INFO - Report Generator initialized
+2025-07-23 07:56:25,297 - INFO - Calculating all technical indicators...
+2025-07-23 07:56:25,474 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:56:25,474 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:56:25,475 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:56:25,475 - INFO - Starting pattern discovery for 5 timeframes
+2025-07-23 07:56:25,475 - INFO - Discovering patterns for 1m timeframe
+2025-07-23 07:56:27,568 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:56:29,549 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:56:29,552 - ERROR - Error in kmeans clustering for 1m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:56:29,622 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:56:29,623 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:56:40,790 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:56:40,794 - ERROR - Error in gmm clustering for 1m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:56:40,798 - INFO - Discovering patterns for 5m timeframe
+2025-07-23 07:56:42,851 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:56:44,876 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:56:44,877 - ERROR - Error in kmeans clustering for 5m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:56:44,942 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:56:44,943 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:56:55,189 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:56:55,193 - ERROR - Error in gmm clustering for 5m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:56:55,194 - INFO - Discovering patterns for 15m timeframe
+2025-07-23 07:56:57,261 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:56:59,224 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:56:59,226 - ERROR - Error in kmeans clustering for 15m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:56:59,301 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:56:59,301 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:57:09,878 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:57:09,895 - ERROR - Error in gmm clustering for 15m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:57:09,895 - INFO - Discovering patterns for 1d timeframe
+2025-07-23 07:57:11,987 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:57:14,036 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:57:14,039 - ERROR - Error in kmeans clustering for 1d: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:57:14,112 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:57:14,113 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:57:25,211 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:57:25,226 - ERROR - Error in gmm clustering for 1d: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:57:25,228 - INFO - Discovering patterns for 1w timeframe
+2025-07-23 07:57:27,319 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:57:29,358 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:57:29,361 - ERROR - Error in kmeans clustering for 1w: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:57:29,442 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:57:29,442 - INFO - dbscan: 0 significant patterns found
+2025-07-23 07:57:42,954 - INFO - Applied gmm clustering: 10 clusters
+2025-07-23 07:57:42,979 - ERROR - Error in gmm clustering for 1w: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (1035,) + inhomogeneous part.
+2025-07-23 07:57:42,979 - INFO - Pattern discovery completed. Total significant patterns: 0
+2025-07-23 07:57:42,991 - INFO - Generating technical analysis report...
+2025-07-23 07:57:43,019 - INFO - Technical analysis report generated successfully
+2025-07-23 07:57:43,020 - INFO - Validating system integration...
+2025-07-23 07:57:43,022 - INFO - Installing scikit-learn...
+2025-07-23 07:57:43,270 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:57:43,271 - INFO - Installing tensorflow...
+2025-07-23 07:57:43,470 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:57:43,471 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:57:43,471 - INFO - ML Candlestick Discovery initialized
+2025-07-23 07:57:43,471 - INFO - Technical Analyzer initialized
+2025-07-23 07:57:43,471 - INFO - Deep Learning Ensemble initialized on cpu
+2025-07-23 07:57:43,471 - INFO - Temporal Analyzer initialized
+2025-07-23 07:57:43,472 - INFO - Candlestick Visualizer initialized
+2025-07-23 07:57:43,472 - INFO - Report Generator initialized
+2025-07-23 07:57:43,472 - INFO - Market Intelligence Engine initialized for RELIANCE.NS
+2025-07-23 07:57:43,472 - INFO - Validating system performance...
+2025-07-23 07:57:43,472 - INFO - Installing scikit-learn...
+2025-07-23 07:57:43,671 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:57:43,672 - INFO - Installing tensorflow...
+2025-07-23 07:57:43,870 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:57:43,870 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:57:43,870 - INFO - ML Candlestick Discovery initialized
+2025-07-23 07:57:43,870 - INFO - Technical Analyzer initialized
+2025-07-23 07:57:43,870 - INFO - Deep Learning Ensemble initialized on cpu
+2025-07-23 07:57:43,870 - INFO - Temporal Analyzer initialized
+2025-07-23 07:57:43,870 - INFO - Candlestick Visualizer initialized
+2025-07-23 07:57:43,870 - INFO - Report Generator initialized
+2025-07-23 07:57:43,870 - INFO - Market Intelligence Engine initialized for RELIANCE.NS
+2025-07-23 07:57:43,870 - INFO - Loading multi-timeframe market data...
+2025-07-23 07:57:43,870 - INFO - Getting latest data for RELIANCE.NS
+2025-07-23 07:57:43,878 - INFO - Loaded data for 5 timeframes
+2025-07-23 07:57:43,878 - INFO - Performing technical analysis...
+2025-07-23 07:57:43,878 - INFO - Calculating all technical indicators...
+2025-07-23 07:57:44,057 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:57:44,058 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:57:44,058 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:57:44,058 - INFO - Technical analysis completed: 61 indicators calculated
+2025-07-23 07:57:44,058 - INFO - Comprehensive validation completed!
+2025-07-23 07:57:44,059 - INFO - Generating comprehensive system rating...
+2025-07-23 07:57:44,060 - INFO - Symbol updated to: RELIANCE.NS
+2025-07-23 07:57:44,060 - INFO - Installing scikit-learn...
+2025-07-23 07:57:44,256 - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:57:44,256 - INFO - Installing tensorflow...
+2025-07-23 07:57:44,459 - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:57:44,459 - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:57:44,459 - INFO - ML Candlestick Discovery initialized
+2025-07-23 07:57:44,459 - INFO - Technical Analyzer initialized
+2025-07-23 07:57:44,459 - INFO - Deep Learning Ensemble initialized on cpu
+2025-07-23 07:57:44,459 - INFO - Temporal Analyzer initialized
+2025-07-23 07:57:44,459 - INFO - Candlestick Visualizer initialized
+2025-07-23 07:57:44,459 - INFO - Report Generator initialized
+2025-07-23 07:57:44,459 - INFO - Market Intelligence Engine initialized for RELIANCE.NS
+2025-07-23 07:57:44,459 - INFO - Symbol updated to: RELIANCE.NS
+2025-07-23 07:57:44,459 - INFO - Starting complete analysis for RELIANCE.NS
+2025-07-23 07:57:44,459 - INFO - Timeframes: ['1m', '5m', '15m', '1d', '1w']
+2025-07-23 07:57:44,459 - INFO - Live data enabled: True
+2025-07-23 07:57:44,459 - INFO - [07:57:44] 0% - Analysis started
+2025-07-23 07:57:44,459 - INFO - Step 1/8: Loading multi-timeframe market data...
+2025-07-23 07:57:44,459 - INFO - Loading multi-timeframe market data...
+2025-07-23 07:57:44,459 - INFO - Getting latest data for RELIANCE.NS
+2025-07-23 07:57:44,464 - INFO - Loaded data for 5 timeframes
+2025-07-23 07:57:44,464 - INFO - [07:57:44] 10% - Data loading completed
+2025-07-23 07:57:44,464 - INFO - 1m: 1873 records, 2025-07-16 09:15:00+05:30 to 2025-07-22 15:29:00+05:30
+2025-07-23 07:57:44,464 - INFO - 5m: 1650 records, 2025-06-23 09:15:00+05:30 to 2025-07-22 15:25:00+05:30
+2025-07-23 07:57:44,464 - INFO - 15m: 550 records, 2025-06-23 09:15:00+05:30 to 2025-07-22 15:15:00+05:30
+2025-07-23 07:57:44,464 - INFO - 1d: 493 records, 2023-07-24 00:00:00+05:30 to 2025-07-22 00:00:00+05:30
+2025-07-23 07:57:44,464 - INFO - 1w: 262 records, 2020-07-20 00:00:00+05:30 to 2025-07-21 00:00:00+05:30
+2025-07-23 07:57:44,464 - INFO - Step 2/8: Performing multi-timeframe technical analysis...
+2025-07-23 07:57:44,464 - INFO - Performing technical analysis...
+2025-07-23 07:57:44,464 - INFO - Calculating all technical indicators...
+2025-07-23 07:57:44,631 - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:57:44,632 - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:57:44,632 - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:57:44,632 - INFO - Technical analysis completed: 61 indicators calculated
+2025-07-23 07:57:44,632 - INFO - [07:57:44] 25% - Technical analysis completed
+2025-07-23 07:57:44,632 - INFO - Step 3/8: Discovering multi-timeframe candlestick patterns...
+2025-07-23 07:57:44,632 - INFO - Discovering candlestick patterns...
+2025-07-23 07:57:44,632 - INFO - Starting pattern discovery for 5 timeframes
+2025-07-23 07:57:44,632 - INFO - Discovering patterns for 1m timeframe
+2025-07-23 07:57:46,730 - INFO - Created 9270 pattern sequences (length 1-20)
+2025-07-23 07:57:48,701 - INFO - Applied kmeans clustering: 20 clusters
+2025-07-23 07:57:48,703 - ERROR - Error in kmeans clustering for 1m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (164,) + inhomogeneous part.
+2025-07-23 07:57:48,774 - INFO - Applied dbscan clustering: 1 clusters
+2025-07-23 07:57:48,775 - INFO - dbscan: 0 significant patterns found

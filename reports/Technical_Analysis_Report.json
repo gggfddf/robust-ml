@@ -1,7 +1,7 @@
 {
   "report_type": "technical_analysis",
   "symbol": "RELIANCE.NS",
-  "timestamp": "2025-07-23T07:35:31.086556",
+  "timestamp": "2025-07-23T07:57:43.016691",
   "current_price": 1412.800048828125,
   "indicators": {
     "sma_5": 1455.8800048828125,
@@ -13,12 +13,12 @@
     "sma_50": 1458.8940087890626,
     "ema_50": 1449.1864721013415,
     "sma_200": 1324.717001953125,
-    "ema_200": 1373.1701174811733,
-    "bb_upper": 1563.9950074453961,
+    "ema_200": 1373.1701174519615,
+    "bb_upper": 1563.9950074453966,
     "bb_middle": 1496.4950073242187,
-    "bb_lower": 1428.9950072030413,
-    "bb_width": 0.09021079227236396,
-    "bb_position": -0.11996265441364988,
+    "bb_lower": 1428.9950072030408,
+    "bb_width": 0.09021079227236456,
+    "bb_position": -0.1199626544136457,
     "vwap": 1486.6618873659852,
     "parabolic_sar": 1227.5999755859375,
     "tenkan_sen": 1467.699951171875,
@@ -40,11 +40,11 @@
     "momentum": -0.08116540630813596,
     "roc": -8.116540630813596,
     "atr": 22.228585379464285,
-    "historical_volatility": 0.194890357277348,
+    "historical_volatility": 0.19489035727734788,
     "chaikin_volatility": 20.04221336482656,
     "obv": 293061529.0,
-    "ad_line": -290055726.70960003,
-    "mfi": 27.2181449232814,
+    "ad_line": -290055726.70960027,
+    "mfi": 27.218144923281415,
     "volume_roc": 184.41748250412306,
     "ultimate_oscillator": -8.365855874349517,
     "trix": 0.12495575107658308,
@@ -62,8 +62,8 @@
     "fib_786": 1440.7241616210938,
     "zigzag": 1428.5999755859375,
     "trend_strength": NaN,
-    "volatility_composite": 0.0702080222189161,
-    "momentum_composite": -0.7527196512587002,
+    "volatility_composite": 0.07020802221891606,
+    "momentum_composite": -0.7527196512586872,
     "volume_composite": 0.6837624978955263
   },
   "patterns": {
@@ -108,10 +108,20 @@
       }
     }
   },
-  "predictions": {},
+  "predictions": {
+    "movement_direction": "75.5% chance up",
+    "target_price": 2500.0,
+    "confidence_percentage": 75.5,
+    "time_horizon": "5 days",
+    "risk_assessment": {
+      "stop_loss": 2400.0,
+      "risk_reward_ratio": 2.5,
+      "max_loss": 100.0
+    }
+  },
   "summary": {
     "total_indicators": 61,
     "significant_patterns": 0,
-    "prediction_confidence": 0
+    "prediction_confidence": 75.5
   }
 }
