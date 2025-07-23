@@ -279,3 +279,43 @@
 2025-07-23 08:15:36,059 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
 2025-07-23 08:15:36,060 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
 2025-07-23 08:15:36,060 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:33:59,068 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:33:59,289 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:33:59,289 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:33:59,502 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:33:59,608 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:33:59,608 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:33:59,608 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:33:59,813 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:33:59,813 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:34:00,023 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:34:00,023 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:34:00,023 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:34:00,024 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 08:34:00,220 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 08:34:00,225 - data.live_data_loader - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 08:34:00,386 - data.live_data_loader - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 08:34:00,393 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:49:01,527 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:49:01,767 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:49:01,768 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:49:01,995 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:49:02,071 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:49:02,071 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:49:02,071 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:49:02,271 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:49:02,271 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:49:02,489 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:49:02,489 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:49:02,489 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:49:02,489 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 08:49:02,662 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 08:49:02,667 - data.live_data_loader - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 08:49:02,759 - data.live_data_loader - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 08:49:02,766 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
