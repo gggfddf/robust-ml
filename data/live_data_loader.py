@@ -19,6 +19,30 @@ from pathlib import Path
 import time
 from concurrent.futures import ThreadPoolExecutor
 import warnings
+import subprocess
+import sys
+
+# Try to import additional data sources
+try:
+    from nsepython import equity_history
+    NSEPYTHON_AVAILABLE = True
+except ImportError:
+    NSEPYTHON_AVAILABLE = False
+    logging.warning("nsepython not available, will use fallback sources")
+
+try:
+    from nsepy import get_history
+    NSEPY_AVAILABLE = True
+except ImportError:
+    NSEPY_AVAILABLE = False
+    logging.warning("nsepy not available, will use fallback sources")
+
+try:
+    from nsetools import nse
+    NSETOOLS_AVAILABLE = True
+except ImportError:
+    NSETOOLS_AVAILABLE = False
+    logging.warning("nsetools not available, will use fallback sources")
 
 # Import configuration
 import sys
@@ -58,8 +82,41 @@ class DataLoader:
         self.min_data_points = 100
         self.max_missing_ratio = 0.1
         
+        # Data sources priority
+        self.data_sources = ['yfinance', 'nsepython', 'nsepy', 'nsetools']
+        
+        # Install missing packages
+        self._install_missing_packages()
+        
         logger.info(f"DataLoader initialized for symbol: {self.config.SYMBOL}")
     
+    def _install_missing_packages(self):
+        """Install missing packages automatically."""
+        required_packages = {
+            'yfinance': 'yfinance',
+            'nsepython': 'nsepython',
+            'nsepy': 'nsepy',
+            'nsetools': 'nsetools',
+            'pandas': 'pandas',
+            'numpy': 'numpy',
+            'scikit-learn': 'scikit-learn',
+            'tensorflow': 'tensorflow',
+            'plotly': 'plotly',
+            'ta': 'ta'
+        }
+        
+        for package_name, pip_name in required_packages.items():
+            try:
+                __import__(package_name)
+                logger.debug(f"Package {package_name} is available")
+            except ImportError:
+                logger.info(f"Installing {package_name}...")
+                try:
+                    subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
+                    logger.info(f"Successfully installed {package_name}")
+                except Exception as e:
+                    logger.warning(f"Failed to install {package_name}: {e}")
+
     def _rate_limit(self):
         """Implement rate limiting for API calls."""
         current_time = time.time()
@@ -169,23 +226,13 @@ class DataLoader:
         return df
     
     def _fetch_data_with_retry(self, symbol: str, timeframe: str, start_date: str, end_date: str, max_retries: int = 3) -> Optional[pd.DataFrame]:
-        """Fetch data with exponential backoff retry logic."""
+        """Fetch data with exponential backoff retry logic using multiple sources."""
         for attempt in range(max_retries):
             try:
                 self._rate_limit()
                 
-                # Convert timeframe to yfinance format
-                yf_interval = self._convert_timeframe(timeframe)
-                
-                # Fetch data
-                ticker = yf.Ticker(symbol)
-                df = ticker.history(
-                    start=start_date,
-                    end=end_date,
-                    interval=yf_interval,
-                    auto_adjust=True,
-                    prepost=False
-                )
+                # Try multiple data sources in priority order
+                df = self._fetch_from_multiple_sources(symbol, timeframe, start_date, end_date)
                 
                 if df is not None and not df.empty:
                     logger.info(f"Successfully fetched {len(df)} records for {symbol} ({timeframe})")
@@ -202,6 +249,111 @@ class DataLoader:
                 else:
                     logger.error(f"All retries failed for {symbol} ({timeframe})")
         
+        return None
+
+    def _fetch_from_multiple_sources(self, symbol: str, timeframe: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
+        """Fetch data from multiple sources with fallback."""
+        # Remove .NS suffix for NSE sources
+        clean_symbol = symbol.replace('.NS', '').replace('.BO', '')
+        
+        # Try yfinance first
+        try:
+            df = self._fetch_from_yfinance(symbol, timeframe, start_date, end_date)
+            if df is not None and not df.empty:
+                return df
+        except Exception as e:
+            logger.warning(f"yfinance failed: {e}")
+        
+        # Try nsepython
+        if NSEPYTHON_AVAILABLE:
+            try:
+                df = self._fetch_from_nsepython(clean_symbol, timeframe, start_date, end_date)
+                if df is not None and not df.empty:
+                    return df
+            except Exception as e:
+                logger.warning(f"nsepython failed: {e}")
+        
+        # Try nsepy
+        if NSEPY_AVAILABLE:
+            try:
+                df = self._fetch_from_nsepy(clean_symbol, timeframe, start_date, end_date)
+                if df is not None and not df.empty:
+                    return df
+            except Exception as e:
+                logger.warning(f"nsepy failed: {e}")
+        
+        # Try nsetools
+        if NSETOOLS_AVAILABLE:
+            try:
+                df = self._fetch_from_nsetools(clean_symbol, timeframe, start_date, end_date)
+                if df is not None and not df.empty:
+                    return df
+            except Exception as e:
+                logger.warning(f"nsetools failed: {e}")
+        
+        return None
+
+    def _fetch_from_yfinance(self, symbol: str, timeframe: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
+        """Fetch data from yfinance."""
+        yf_interval = self._convert_timeframe(timeframe)
+        ticker = yf.Ticker(symbol)
+        df = ticker.history(
+            start=start_date,
+            end=end_date,
+            interval=yf_interval,
+            auto_adjust=True,
+            prepost=False
+        )
+        return df
+
+    def _fetch_from_nsepython(self, symbol: str, timeframe: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
+        """Fetch data from nsepython."""
+        # nsepython doesn't support intraday data, only daily
+        if timeframe in ['1m', '5m', '15m']:
+            return None
+        
+        data = equity_history(symbol, "NSE")
+        if data is not None and not data.empty:
+            # Convert to standard format
+            df = pd.DataFrame(data)
+            df.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+            df.index = pd.to_datetime(df.index)
+            return df
+        return None
+
+    def _fetch_from_nsepy(self, symbol: str, timeframe: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
+        """Fetch data from nsepy."""
+        # nsepy doesn't support intraday data, only daily
+        if timeframe in ['1m', '5m', '15m']:
+            return None
+        
+        start_dt = datetime.strptime(start_date, '%Y-%m-%d')
+        end_dt = datetime.strptime(end_date, '%Y-%m-%d')
+        
+        data = get_history(symbol=symbol, start=start_dt, end=end_dt)
+        if data is not None and not data.empty:
+            return data
+        return None
+
+    def _fetch_from_nsetools(self, symbol: str, timeframe: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
+        """Fetch data from nsetools."""
+        # nsetools has limited functionality, mainly for current data
+        try:
+            nse_obj = nse()
+            quote = nse_obj.get_quote(symbol)
+            if quote:
+                # Create a single row DataFrame with current data
+                current_time = datetime.now()
+                df = pd.DataFrame({
+                    'Open': [quote['openPrice']],
+                    'High': [quote['highPrice']],
+                    'Low': [quote['lowPrice']],
+                    'Close': [quote['lastPrice']],
+                    'Volume': [quote['totalTradedVolume']]
+                }, index=[current_time])
+                return df
+        except Exception as e:
+            logger.warning(f"nsetools error: {e}")
         return None
     
     def _convert_timeframe(self, timeframe: str) -> str:
@@ -222,8 +374,17 @@ class DataLoader:
         """Calculate appropriate date range for the timeframe."""
         end_date = datetime.now()
         
-        if timeframe in ['1m', '5m', '15m', '30m']:
-            # Intraday data - last 60 days
+        if timeframe == '1m':
+            # 1-minute data - last 7 days (yfinance limit)
+            start_date = end_date - timedelta(days=7)
+        elif timeframe == '5m':
+            # 5-minute data - last 60 days
+            start_date = end_date - timedelta(days=60)
+        elif timeframe == '15m':
+            # 15-minute data - last 60 days
+            start_date = end_date - timedelta(days=60)
+        elif timeframe == '30m':
+            # 30-minute data - last 60 days
             start_date = end_date - timedelta(days=60)
         elif timeframe == '1h':
             # Hourly data - last 2 years

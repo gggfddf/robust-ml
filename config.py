@@ -20,16 +20,19 @@ class MarketConfig:
     
     # ===== USER EDITABLE PARAMETER =====
     SYMBOL: str = "RELIANCE.NS"  # ONLY EDIT THIS - Use .NS for NSE, .BO for BSE
+    EXCHANGE: str = "NSE"
     
     # ===== OPTIMIZED DEFAULTS (DO NOT EDIT) =====
     
     # Timeframes for analysis
-    TIMEFRAMES: List[str] = field(default_factory=lambda: ["5m", "15m", "1d", "1w"])
+    TIMEFRAMES: List[str] = field(default_factory=lambda: ["1m", "5m", "15m", "1d", "1w"])
     
     # Data parameters
     HISTORICAL_YEARS: int = 2
     DATA_SOURCE: str = "yfinance"
     CACHE_DURATION: int = 300  # 5 minutes
+    LIVE_DATA_ENABLED: bool = True
+    ANALYSIS_PERIOD: str = "2y"
     
     # Market hours (IST)
     MARKET_OPEN: str = "09:15"

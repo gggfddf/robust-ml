@@ -54,6 +54,9 @@ The Ultimate Market AI Engine is a comprehensive, ML-powered market analysis sys
 Ultimate Market AI Engine/
 ├── config.py                 # Configuration system (ONLY symbol editable)
 ├── main.py                   # Main orchestration pipeline
+├── run_reliance_analysis.py  # Complete Reliance analysis script
+├── validate_system.py        # Comprehensive system validation
+├── system_rating.py          # System performance rating
 ├── requirements.txt          # All dependencies
 ├── data/
 │   └── live_data_loader.py   # Multi-timeframe data fetching
@@ -73,13 +76,22 @@ Ultimate Market AI Engine/
 ├── models/                   # Model storage
 ├── reports/                  # Generated reports
 ├── charts/                   # Generated charts
-└── cache/                    # Data cache
+├── cache/                    # Data cache
+├── validation_report.json    # System validation results
+└── system_rating.json        # System rating report
 ```
 
 ## 🚀 Quick Start
 
-### 1. Installation
+### Option 1: Complete Reliance Industries Analysis (Recommended)
+```bash
+# Run the comprehensive analysis script with full validation
+python run_reliance_analysis.py
+```
 
+### Option 2: Standard Analysis
+
+#### 1. Installation
 ```bash
 # Clone the repository
 git clone <repository-url>
@@ -89,8 +101,7 @@ cd ultimate-market-ai-engine
 pip install -r requirements.txt
 ```
 
-### 2. Configuration
-
+#### 2. Configuration
 **ONLY ONE PARAMETER TO EDIT**: The stock symbol in `config.py`
 
 ```python
@@ -100,14 +111,19 @@ SYMBOL: str = "RELIANCE.NS"  # Change to your desired stock symbol
 
 All other parameters are optimized defaults for Indian market analysis.
 
-### 3. Run Analysis
-
+#### 3. Run Analysis
 ```bash
-# Analyze default symbol (RELIANCE.NS)
+# Basic analysis
 python main.py
 
-# Analyze specific symbol
-python main.py --symbol TCS.NS
+# With specific timeframes (1m, 5m, 15m, 1d, 1w)
+python main.py --symbol RELIANCE.NS --timeframes 1m 5m 15m 1d 1w
+
+# With system validation
+python main.py --symbol RELIANCE.NS --validate
+
+# Generate system rating
+python main.py --symbol RELIANCE.NS --rating
 
 # Batch analysis for multiple symbols
 python main.py --batch RELIANCE.NS TCS.NS INFY.NS
@@ -116,19 +132,33 @@ python main.py --batch RELIANCE.NS TCS.NS INFY.NS
 python main.py --update-symbol HDFCBANK.NS
 ```
 
+#### 4. System Validation & Rating
+```bash
+# Run comprehensive system validation
+python validate_system.py --comprehensive-check
+
+# Generate detailed system rating
+python system_rating.py --generate-report
+```
+
 ## 📊 Sample Output
 
 ### Analysis Results
 ```
-ULTIMATE MARKET AI ENGINE - ANALYSIS RESULTS
-==================================================
-Symbol: RELIANCE.NS
-Technical Sentiment: bullish
-ML Prediction: 75.5% chance up
-Target Price: 2500.00
-Confidence: High
-Patterns Discovered: 47
-Execution Time: 0:02:15
+🚀 ULTIMATE MARKET AI ENGINE - COMPLETE ANALYSIS RESULTS
+============================================================
+📈 Symbol: RELIANCE.NS
+⏰ Timeframes Analyzed: 5
+📊 Data Points Processed: 15,420
+🎯 Performance Score: 87.3/100
+⏱️ Execution Time: 0:02:15
+
+📉 Technical Sentiment: bullish
+🤖 ML Prediction: 75.5% chance up
+💰 Target Price: ₹2500.00
+🎯 Confidence: High
+🔍 Patterns Discovered: 47
+📈 Indicators Calculated: 40+
 ```
 
 ### Generated Files
@@ -141,9 +171,10 @@ Execution Time: 0:02:15
 
 ### Data Requirements
 - **Minimum**: 2 years historical data
-- **Timeframes**: 5m, 15m, 1d, 1w
-- **Data Source**: yfinance (with fallback options)
+- **Timeframes**: 1m, 5m, 15m, 1d, 1w (all timeframes)
+- **Data Source**: yfinance, nsepython, nsepy, nsetools (multiple sources)
 - **Market Hours**: 9:15 AM - 3:30 PM IST
+- **Live Data**: Real-time data integration with caching
 
 ### ML Models
 - **LSTM**: 3 layers, 128 units

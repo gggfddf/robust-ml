@@ -15,6 +15,11 @@ tensorflow>=2.6.0
 yfinance>=0.1.70
 alpha-vantage>=2.3.1
 pandas-datareader>=0.10.0
+nsepython>=0.8
+nsepy>=0.8
+nsetools>=1.0.0
+jugaad-data>=0.0.1
+openchart>=0.1.0
 
 # Technical Analysis
 ta>=0.10.1

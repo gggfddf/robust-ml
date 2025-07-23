@@ -67,12 +67,14 @@ class MarketIntelligenceEngine:
         
         logger.info(f"Market Intelligence Engine initialized for {self.config.SYMBOL}")
     
-    def run_complete_analysis(self, symbol: str = None) -> Dict[str, Any]:
+    def run_complete_analysis(self, symbol: str = None, timeframes: List[str] = None, live_data: bool = True) -> Dict[str, Any]:
         """
-        Run complete market analysis for the specified symbol.
+        Run complete market analysis for the specified symbol with multi-timeframe support.
         
         Args:
             symbol: Stock symbol (optional, uses config default if not provided)
+            timeframes: List of timeframes to analyze (optional, uses config default if not provided)
+            live_data: Whether to use live data (defaults to True)
         
         Returns:
             Complete analysis results
@@ -80,30 +82,39 @@ class MarketIntelligenceEngine:
         start_time = datetime.now()
         
         try:
-            # Update symbol if provided
+            # Update configuration if provided
             if symbol:
                 update_symbol(symbol)
+            if timeframes:
+                self.config.TIMEFRAMES = timeframes
+            if not live_data:
+                self.config.LIVE_DATA_ENABLED = False
             
             logger.info(f"Starting complete analysis for {self.config.SYMBOL}")
+            logger.info(f"Timeframes: {self.config.TIMEFRAMES}")
+            logger.info(f"Live data enabled: {self.config.LIVE_DATA_ENABLED}")
             self._log_progress("Analysis started", 0)
             
             # Step 1: Data Loading (10%)
-            logger.info("Step 1/8: Loading market data...")
+            logger.info("Step 1/8: Loading multi-timeframe market data...")
             data_results = self._load_market_data()
             self._log_progress("Data loading completed", 10)
             
+            # Validate multi-timeframe data
+            self._validate_multi_timeframe_data(data_results)
+            
             # Step 2: Technical Analysis (25%)
-            logger.info("Step 2/8: Performing technical analysis...")
+            logger.info("Step 2/8: Performing multi-timeframe technical analysis...")
             technical_results = self._perform_technical_analysis(data_results)
             self._log_progress("Technical analysis completed", 25)
             
             # Step 3: Pattern Discovery (40%)
-            logger.info("Step 3/8: Discovering candlestick patterns...")
+            logger.info("Step 3/8: Discovering multi-timeframe candlestick patterns...")
             pattern_results = self._discover_patterns(data_results)
             self._log_progress("Pattern discovery completed", 40)
             
             # Step 4: Deep Learning Predictions (55%)
-            logger.info("Step 4/8: Generating ML predictions...")
+            logger.info("Step 4/8: Generating multi-timeframe ML predictions...")
             ml_results = self._generate_ml_predictions(data_results, technical_results)
             self._log_progress("ML predictions completed", 55)
             
@@ -113,12 +124,12 @@ class MarketIntelligenceEngine:
             self._log_progress("Temporal analysis completed", 70)
             
             # Step 6: Visualization (80%)
-            logger.info("Step 6/8: Creating visualizations...")
+            logger.info("Step 6/8: Creating multi-timeframe visualizations...")
             visualization_results = self._create_visualizations(data_results, technical_results, pattern_results)
             self._log_progress("Visualization completed", 80)
             
             # Step 7: Report Generation (90%)
-            logger.info("Step 7/8: Generating reports...")
+            logger.info("Step 7/8: Generating comprehensive reports...")
             report_results = self._generate_reports(data_results, technical_results, pattern_results, ml_results)
             self._log_progress("Report generation completed", 90)
             
@@ -130,12 +141,14 @@ class MarketIntelligenceEngine:
             )
             self._log_progress("Analysis completed", 100)
             
-            # Calculate execution time
+            # Calculate execution time and system metrics
             execution_time = datetime.now() - start_time
             final_results['execution_time'] = str(execution_time)
             final_results['execution_log'] = self.execution_log
+            final_results['system_metrics'] = self._calculate_system_metrics(execution_time, data_results)
             
             logger.info(f"Complete analysis finished in {execution_time}")
+            logger.info(f"Analyzed {len(self.config.TIMEFRAMES)} timeframes: {self.config.TIMEFRAMES}")
             
             return final_results
             
@@ -455,6 +468,79 @@ class MarketIntelligenceEngine:
         self.execution_log.append(log_entry)
         logger.info(log_entry)
     
+    def _validate_multi_timeframe_data(self, data_results: Dict[str, Any]):
+        """Validate multi-timeframe data quality."""
+        try:
+            if 'data' not in data_results:
+                raise Exception("No data found in results")
+            
+            data = data_results['data']
+            missing_timeframes = []
+            invalid_timeframes = []
+            
+            for timeframe in self.config.TIMEFRAMES:
+                if timeframe not in data:
+                    missing_timeframes.append(timeframe)
+                else:
+                    df = data[timeframe]
+                    if df is None or df.empty:
+                        invalid_timeframes.append(timeframe)
+            
+            if missing_timeframes:
+                logger.warning(f"Missing timeframes: {missing_timeframes}")
+            
+            if invalid_timeframes:
+                logger.warning(f"Invalid timeframes (empty data): {invalid_timeframes}")
+            
+            # Log data summary
+            for timeframe, df in data.items():
+                if df is not None and not df.empty:
+                    logger.info(f"{timeframe}: {len(df)} records, {df.index[0]} to {df.index[-1]}")
+            
+        except Exception as e:
+            logger.error(f"Data validation failed: {e}")
+            raise
+    
+    def _calculate_system_metrics(self, execution_time, data_results: Dict[str, Any]) -> Dict[str, Any]:
+        """Calculate comprehensive system performance metrics."""
+        try:
+            metrics = {
+                'execution_time_seconds': execution_time.total_seconds(),
+                'timeframes_analyzed': len(self.config.TIMEFRAMES),
+                'data_points_processed': 0,
+                'patterns_discovered': 0,
+                'indicators_calculated': 0,
+                'ml_predictions_generated': 0,
+                'reports_generated': 0,
+                'performance_score': 0
+            }
+            
+            # Calculate data points processed
+            if 'data' in data_results:
+                for timeframe, df in data_results['data'].items():
+                    if df is not None and not df.empty:
+                        metrics['data_points_processed'] += len(df)
+            
+            # Calculate performance score (0-100)
+            base_score = 50  # Base score
+            
+            # Time efficiency (faster = higher score)
+            time_score = max(0, 100 - (metrics['execution_time_seconds'] / 60) * 10)
+            
+            # Data coverage (more timeframes = higher score)
+            coverage_score = min(100, (metrics['timeframes_analyzed'] / 5) * 100)
+            
+            # Data volume (more data points = higher score)
+            volume_score = min(100, (metrics['data_points_processed'] / 10000) * 10)
+            
+            metrics['performance_score'] = (base_score + time_score + coverage_score + volume_score) / 4
+            
+            return metrics
+            
+        except Exception as e:
+            logger.error(f"Error calculating system metrics: {e}")
+            return {'error': str(e)}
+    
     def get_analysis_summary(self) -> Dict[str, Any]:
         """Get summary of the latest analysis."""
         if not self.analysis_results:
@@ -518,10 +604,18 @@ def main():
     parser = argparse.ArgumentParser(description='Ultimate Market AI Engine')
     parser.add_argument('--symbol', type=str, default=None, 
                        help='Stock symbol to analyze (e.g., RELIANCE.NS)')
+    parser.add_argument('--timeframes', type=str, nargs='+', 
+                       help='Timeframes to analyze (e.g., 1m 5m 15m 1d 1w)')
+    parser.add_argument('--live-data', action='store_true', default=True,
+                       help='Use live data (default: True)')
     parser.add_argument('--batch', type=str, nargs='+', 
                        help='List of symbols for batch analysis')
     parser.add_argument('--update-symbol', type=str, 
                        help='Update the default symbol in config')
+    parser.add_argument('--validate', action='store_true',
+                       help='Run system validation before analysis')
+    parser.add_argument('--rating', action='store_true',
+                       help='Generate system rating report')
     
     args = parser.parse_args()
     
@@ -529,6 +623,40 @@ def main():
         update_symbol(args.update_symbol)
         print(f"Default symbol updated to: {args.update_symbol}")
         return
+    
+    # Run validation if requested
+    if args.validate:
+        print("🔍 Running system validation...")
+        try:
+            from validate_system import SystemValidator
+            validator = SystemValidator()
+            validation_report = validator.run_comprehensive_validation()
+            
+            summary = validation_report['validation_summary']
+            print(f"✅ Validation completed: {summary['overall_status']} ({summary['overall_score']:.1f}/10)")
+            
+            if summary['overall_score'] < 7.0:
+                print("⚠️ Warning: System validation score is below recommended threshold")
+                response = input("Continue with analysis anyway? (y/N): ")
+                if response.lower() != 'y':
+                    return
+        except Exception as e:
+            print(f"❌ Validation failed: {e}")
+            return
+    
+    # Generate rating if requested
+    if args.rating:
+        print("🏆 Generating system rating...")
+        try:
+            from system_rating import SystemRater
+            rater = SystemRater()
+            rating_report = rater.generate_comprehensive_rating()
+            
+            summary = rating_report['rating_summary']
+            print(f"📊 System Rating: {summary['rating_level']} ({summary['overall_score']:.1f}/10)")
+            print(f"Grade: {summary['grade']}")
+        except Exception as e:
+            print(f"❌ Rating generation failed: {e}")
     
     # Initialize engine
     engine = MarketIntelligenceEngine()
@@ -552,23 +680,34 @@ def main():
     else:
         # Run single analysis
         symbol = args.symbol or engine.config.SYMBOL
-        print(f"Running analysis for {symbol}...")
+        timeframes = args.timeframes or engine.config.TIMEFRAMES
+        live_data = args.live_data
         
-        results = engine.run_complete_analysis(symbol)
+        print(f"🚀 Running Ultimate Market AI Engine for {symbol}")
+        print(f"📊 Timeframes: {timeframes}")
+        print(f"🔄 Live data: {live_data}")
+        
+        results = engine.run_complete_analysis(symbol, timeframes, live_data)
         
         if results.get('status') == 'completed':
             summary = results.get('summary', {})
+            system_metrics = results.get('system_metrics', {})
             
-            print("\n" + "="*50)
-            print("ULTIMATE MARKET AI ENGINE - ANALYSIS RESULTS")
-            print("="*50)
-            print(f"Symbol: {summary.get('symbol', 'N/A')}")
-            print(f"Technical Sentiment: {summary.get('technical_sentiment', 'N/A')}")
-            print(f"ML Prediction: {summary.get('prediction_direction', 'N/A')}")
-            print(f"Target Price: {summary.get('target_price', 0):.2f}")
-            print(f"Confidence: {summary.get('ml_confidence', 'N/A')}")
-            print(f"Patterns Discovered: {summary.get('total_patterns', 0)}")
-            print(f"Execution Time: {results.get('execution_time', 'N/A')}")
+            print("\n" + "="*60)
+            print("🚀 ULTIMATE MARKET AI ENGINE - COMPLETE ANALYSIS RESULTS")
+            print("="*60)
+            print(f"📈 Symbol: {summary.get('symbol', 'N/A')}")
+            print(f"⏰ Timeframes Analyzed: {system_metrics.get('timeframes_analyzed', 0)}")
+            print(f"📊 Data Points Processed: {system_metrics.get('data_points_processed', 0):,}")
+            print(f"🎯 Performance Score: {system_metrics.get('performance_score', 0):.1f}/100")
+            print(f"⏱️ Execution Time: {results.get('execution_time', 'N/A')}")
+            print()
+            print(f"📉 Technical Sentiment: {summary.get('technical_sentiment', 'N/A')}")
+            print(f"🤖 ML Prediction: {summary.get('prediction_direction', 'N/A')}")
+            print(f"💰 Target Price: ₹{summary.get('target_price', 0):.2f}")
+            print(f"🎯 Confidence: {summary.get('ml_confidence', 'N/A')}")
+            print(f"🔍 Patterns Discovered: {summary.get('total_patterns', 0)}")
+            print(f"📈 Indicators Calculated: {system_metrics.get('indicators_calculated', 0)}")
             
             # Show report paths
             reports = engine.get_reports()
