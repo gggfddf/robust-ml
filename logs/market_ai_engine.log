@@ -338,3 +338,9 @@
 2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
 2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
 2025-07-23 09:19:10,732 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 09:21:32,078 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 09:21:32,308 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 09:21:32,308 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 09:21:32,537 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 09:21:32,539 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 09:21:32,539 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
