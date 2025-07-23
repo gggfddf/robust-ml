@@ -186,32 +186,53 @@ class UltimateMarketAISystem:
             return {'real_breakouts': 0, 'fake_breakouts': 0, 'breakout_score': 0}
     
     def _run_ml_analysis(self, multi_data: Dict[str, pd.DataFrame]) -> Dict:
-        """Run comprehensive ML analysis"""
+        """Run comprehensive ML analysis with robust prediction"""
         try:
             import sys
             sys.path.append('/workspace')
-            from ml_enhanced_pipeline import EnhancedMLPipeline
+            from prediction.robust_price_predictor import RobustPricePredictor
             
-            # Initialize ML pipeline
-            ml_pipeline = EnhancedMLPipeline(self.symbol)
+            # Initialize robust predictor
+            predictor = RobustPricePredictor(self.symbol)
             
-            # Run ML analysis
-            ml_results = ml_pipeline.run_complete_pipeline()
+            # Run predictions for each timeframe
+            prediction_results = {}
+            total_models = 0
+            total_predictions = 0
+            
+            for timeframe, data in multi_data.items():
+                if data is not None and len(data) > 0:
+                    logger.info(f"Running robust prediction for {timeframe}")
+                    
+                    # Run complete prediction
+                    results = predictor.run_complete_prediction(data, timeframe)
+                    prediction_results[timeframe] = results
+                    
+                    # Count models and predictions
+                    if 'model_training' in results:
+                        total_models += results['model_training'].get('models_trained', 0)
+                        total_predictions += 1
+            
+            # Calculate overall ML score
+            ml_score = self._calculate_robust_ml_score(prediction_results)
+            
+            # Generate trading signals from predictions
+            trading_signals = self._generate_ml_trading_signals(prediction_results)
             
             ml_analysis = {
-                'models_trained': len(ml_results.get('model_training', {})),
-                'predictions_generated': len(ml_results.get('predictions', {})),
-                'trading_signals': ml_results.get('trading_signals', {}).get('summary', {}),
-                'ml_details': ml_results,
-                'ml_score': self._calculate_ml_score(ml_results)
+                'models_trained': total_models,
+                'predictions_generated': total_predictions,
+                'trading_signals': trading_signals,
+                'prediction_details': prediction_results,
+                'ml_score': ml_score
             }
             
-            logger.info(f"✅ ML Analysis: {ml_analysis['models_trained']} models, {ml_analysis['predictions_generated']} predictions")
+            logger.info(f"✅ Robust ML Analysis: {ml_analysis['models_trained']} models, {ml_analysis['predictions_generated']} predictions")
             
             return ml_analysis
             
         except Exception as e:
-            logger.error(f"❌ Error in ML analysis: {str(e)}")
+            logger.error(f"❌ Error in robust ML analysis: {str(e)}")
             return {'models_trained': 0, 'predictions_generated': 0, 'ml_score': 0}
     
     def _generate_trading_insights(self, analysis_results: Dict) -> Dict:
@@ -479,8 +500,85 @@ class UltimateMarketAISystem:
             logger.error(f"❌ Error calculating breakout score: {str(e)}")
             return 0.0
     
+    def _calculate_robust_ml_score(self, prediction_results: Dict) -> float:
+        """Calculate robust ML analysis score"""
+        try:
+            total_models = 0
+            total_r2_scores = []
+            total_mape_scores = []
+            
+            for timeframe, results in prediction_results.items():
+                if 'model_training' in results:
+                    training = results['model_training']
+                    total_models += training.get('models_trained', 0)
+                    
+                    # Collect performance metrics
+                    performance = training.get('model_performance', {})
+                    for model_name, metrics in performance.items():
+                        total_r2_scores.append(metrics.get('r2', 0))
+                        total_mape_scores.append(metrics.get('mape', 1))
+            
+            if not total_r2_scores:
+                return 0.0
+            
+            # Calculate scores
+            model_score = min(1.0, total_models / 20)  # Normalize to 0-1
+            avg_r2 = np.mean(total_r2_scores)
+            avg_mape = np.mean(total_mape_scores)
+            
+            # Performance score based on R² and MAPE
+            performance_score = (avg_r2 * 0.7 + (1 - avg_mape) * 0.3)
+            
+            # Overall score
+            score = (model_score * 0.3 + performance_score * 0.7)
+            return round(score, 3)
+            
+        except Exception as e:
+            logger.error(f"❌ Error calculating robust ML score: {str(e)}")
+            return 0.0
+    
+    def _generate_ml_trading_signals(self, prediction_results: Dict) -> Dict:
+        """Generate trading signals from robust predictions"""
+        try:
+            all_signals = []
+            buy_signals = 0
+            sell_signals = 0
+            hold_signals = 0
+            
+            for timeframe, results in prediction_results.items():
+                if 'trading_signals' in results:
+                    signals = results['trading_signals']
+                    signal_type = signals.get('signal', 'HOLD')
+                    
+                    if signal_type == 'BUY':
+                        buy_signals += 1
+                    elif signal_type == 'SELL':
+                        sell_signals += 1
+                    else:
+                        hold_signals += 1
+                    
+                    all_signals.append({
+                        'timeframe': timeframe,
+                        'signal': signal_type,
+                        'confidence': signals.get('confidence', 0),
+                        'expected_return': signals.get('expected_return', 0),
+                        'reason': signals.get('reason', 'No reason')
+                    })
+            
+            return {
+                'buy_signals': buy_signals,
+                'sell_signals': sell_signals,
+                'hold_signals': hold_signals,
+                'total_signals': len(all_signals),
+                'signal_details': all_signals
+            }
+            
+        except Exception as e:
+            logger.error(f"❌ Error generating ML trading signals: {str(e)}")
+            return {'buy_signals': 0, 'sell_signals': 0, 'hold_signals': 0, 'total_signals': 0}
+    
     def _calculate_ml_score(self, ml_results: Dict) -> float:
-        """Calculate ML analysis score"""
+        """Calculate ML analysis score (legacy method)"""
         try:
             models_trained = len(ml_results.get('model_training', {}))
             predictions_generated = len(ml_results.get('predictions', {}))
