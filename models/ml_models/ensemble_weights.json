@@ -1,0 +1,6 @@
+{
+  "RandomForest": 0.0,
+  "XGBoost": 1.0,
+  "LightGBM": 0.0,
+  "GradientBoosting": 0.0
+}

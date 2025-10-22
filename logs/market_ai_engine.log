@@ -1,0 +1,346 @@
+2025-07-23 07:19:52,800 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:19:53,033 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:19:53,033 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:19:53,229 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:19:53,236 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:19:53,252 - data.live_data_loader - INFO - Getting latest data for RELIANCE.NS
+2025-07-23 07:20:10,226 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:20:10,442 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:20:10,442 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:20:10,647 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:20:10,649 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:20:10,649 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 07:20:10,656 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 07:20:27,708 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:20:27,913 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:20:27,914 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:20:28,119 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:20:28,121 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:20:28,121 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 07:20:28,122 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 07:20:28,303 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 07:20:28,308 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 07:20:43,463 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:20:43,687 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:20:43,687 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:20:43,886 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:20:43,888 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:20:43,889 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 07:20:43,894 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 07:20:44,064 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:20:44,064 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:20:44,064 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:30:40,297 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:30:40,537 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:30:40,537 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:30:40,753 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:30:40,756 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:30:40,756 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 07:30:40,756 - reports.report_generator - INFO - Report Generator initialized
+2025-07-23 07:30:40,764 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 07:30:40,962 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:30:40,963 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:30:40,963 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:30:40,963 - reports.report_generator - INFO - Generating technical analysis report...
+2025-07-23 07:31:23,431 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 07:31:23,631 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 07:31:23,631 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 07:31:23,827 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 07:31:23,829 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 07:31:23,829 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 07:31:23,830 - reports.report_generator - INFO - Report Generator initialized
+2025-07-23 07:31:23,830 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 07:31:24,043 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 07:31:24,048 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 07:31:24,244 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 07:31:24,245 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 07:31:24,245 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 07:31:24,245 - reports.report_generator - INFO - Generating technical analysis report...
+2025-07-23 07:31:24,256 - reports.report_generator - INFO - Technical analysis report generated successfully
+2025-07-23 08:04:41,075 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:04:41,290 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:04:41,290 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:04:41,486 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:04:41,579 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:04:41,579 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:04:41,580 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:04:41,811 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:04:41,811 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:04:42,013 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:04:42,013 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:04:42,013 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:04:42,014 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 08:04:42,308 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:04:42,393 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:42,393 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,394 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,394 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,394 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 08:04:42,506 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:04:42,511 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:42,511 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,511 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,511 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,511 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 08:04:42,512 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:42,512 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,512 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,512 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,512 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 08:04:42,512 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:04:42,512 - data.live_data_loader - INFO - Fetching 1d data for 1w from 2023-07-24 to 2025-07-23
+2025-07-23 08:04:42,718 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:42,718 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,718 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 1
+2025-07-23 08:04:42,719 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,719 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 2
+2025-07-23 08:04:42,819 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:42,819 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,820 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,820 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,820 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 3
+2025-07-23 08:04:42,820 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:04:42,820 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 08:04:42,821 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:42,821 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,821 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,821 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,821 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 08:04:42,921 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:42,921 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:42,921 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:42,921 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:42,921 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 08:04:43,021 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:43,021 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:43,021 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:43,021 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:43,021 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 08:04:43,021 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:04:50,437 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:04:50,659 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:04:50,659 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:04:50,857 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:04:50,926 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:04:50,926 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:04:50,926 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 08:04:51,249 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:04:51,401 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:51,401 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,402 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,402 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,402 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 08:04:51,514 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:04:51,519 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:51,519 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,519 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,519 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,519 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 08:04:51,519 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:04:51,520 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,520 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,520 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,520 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 08:04:51,520 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:04:51,520 - data.live_data_loader - INFO - Fetching 1d data for 1w from 2023-07-24 to 2025-07-23
+2025-07-23 08:04:51,729 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:51,729 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,729 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,729 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,730 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 1
+2025-07-23 08:04:51,730 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:51,730 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,730 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,730 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,730 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 2
+2025-07-23 08:04:51,830 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:04:51,830 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:04:51,831 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:04:51,831 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:04:51,831 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 3
+2025-07-23 08:04:51,831 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:11:10,864 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:11:11,118 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:11:11,119 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:11:11,351 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:11:11,462 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:11:11,462 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:11:11,463 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:11:11,666 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:11:11,666 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:11:11,860 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:11:11,860 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:11:11,860 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:11:11,860 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 08:11:12,149 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:11:12,233 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,233 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,234 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,234 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,234 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 08:11:12,339 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 08:11:12,345 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,345 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,345 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,345 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,345 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 08:11:12,346 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,346 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,346 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,346 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,346 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 08:11:12,346 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:11:12,346 - data.live_data_loader - INFO - Fetching 1d data for 1w from 2023-07-24 to 2025-07-23
+2025-07-23 08:11:12,613 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:11:12,613 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,613 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 1
+2025-07-23 08:11:12,614 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,614 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 2
+2025-07-23 08:11:12,714 - yfinance - ERROR - $1W: possibly delisted; no timezone found
+2025-07-23 08:11:12,715 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,715 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,715 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,715 - data.live_data_loader - WARNING - Empty data received for 1w (1d) on attempt 3
+2025-07-23 08:11:12,715 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:11:12,715 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 08:11:12,716 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,716 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,716 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,716 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,716 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 08:11:12,816 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,816 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,816 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,816 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,817 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 08:11:12,916 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 08:11:12,916 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 08:11:12,917 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 08:11:12,917 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 08:11:12,917 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 08:11:12,917 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 08:15:25,731 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:15:25,952 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:15:25,953 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:15:26,151 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:15:26,153 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:15:26,153 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:15:26,153 - pattern_analysis.ml_candlestick_patterns - INFO - ML Candlestick Discovery initialized
+2025-07-23 08:15:26,153 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 08:15:26,349 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 08:15:26,354 - data.live_data_loader - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 08:15:26,436 - data.live_data_loader - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 08:15:26,443 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:15:26,613 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:15:26,613 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:15:26,613 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:15:26,613 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:15:26,781 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:15:26,782 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:15:26,782 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:15:30,518 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:15:30,745 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:15:30,745 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:15:30,942 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:15:30,945 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:15:30,945 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:15:30,945 - pattern_analysis.ml_candlestick_patterns - INFO - ML Candlestick Discovery initialized
+2025-07-23 08:15:30,956 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:15:31,129 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:15:31,130 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:15:31,130 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:15:31,130 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:15:31,300 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:15:31,301 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:15:31,301 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:15:34,981 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:15:35,186 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:15:35,186 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:15:35,394 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:15:35,484 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:15:35,484 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:15:35,484 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:15:35,682 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:15:35,682 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:15:35,877 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:15:35,877 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:15:35,877 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:15:35,888 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:15:36,059 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:15:36,060 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:15:36,060 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:33:59,068 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:33:59,289 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:33:59,289 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:33:59,502 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:33:59,608 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:33:59,608 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:33:59,608 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:33:59,813 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:33:59,813 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:34:00,023 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:34:00,023 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:34:00,023 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:34:00,024 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 08:34:00,220 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 08:34:00,225 - data.live_data_loader - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 08:34:00,386 - data.live_data_loader - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 08:34:00,393 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:34:00,562 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 08:49:01,527 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:49:01,767 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:49:01,768 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:49:01,995 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:49:02,071 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:49:02,071 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:49:02,071 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 08:49:02,271 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 08:49:02,271 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 08:49:02,489 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 08:49:02,489 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 08:49:02,489 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized
+2025-07-23 08:49:02,489 - data.live_data_loader - INFO - Fetching 1d data for RELIANCE.NS from 2023-07-24 to 2025-07-23
+2025-07-23 08:49:02,662 - data.live_data_loader - INFO - Successfully fetched 493 records for RELIANCE.NS (1d)
+2025-07-23 08:49:02,667 - data.live_data_loader - INFO - Fetching 1w data for RELIANCE.NS from 2020-07-24 to 2025-07-23
+2025-07-23 08:49:02,759 - data.live_data_loader - INFO - Successfully fetched 262 records for RELIANCE.NS (1w)
+2025-07-23 08:49:02,766 - technical_analysis.advanced_indicators - INFO - Calculating all technical indicators...
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Analyzed patterns for 61 indicators
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated confluence scores: {'trend': -0.75, 'momentum': 0.6666666666666666, 'volatility': 0.0, 'volume': -1.0, 'overall': np.float64(-0.27083333333333337)}
+2025-07-23 08:49:02,934 - technical_analysis.advanced_indicators - INFO - Calculated 61 indicators with pattern analysis
+2025-07-23 09:19:10,238 - data.live_data_loader - INFO - Fetching 1d data for 1d from 2023-07-24 to 2025-07-23
+2025-07-23 09:19:10,534 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 09:19:10,615 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,615 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,616 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 1
+2025-07-23 09:19:10,726 - yfinance - ERROR - HTTP Error 404: 
+2025-07-23 09:19:10,731 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,731 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 2
+2025-07-23 09:19:10,732 - yfinance - ERROR - $1D: possibly delisted; no timezone found
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsepython failed: equity_history() missing 2 required positional arguments: 'start_date' and 'end_date'
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsepy failed: cannot remove local variables from FrameLocalsProxy
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - nsetools error: 'module' object is not callable
+2025-07-23 09:19:10,732 - data.live_data_loader - WARNING - Empty data received for 1d (1d) on attempt 3
+2025-07-23 09:19:10,732 - data.live_data_loader - ERROR - Failed to fetch data for 1d
+2025-07-23 09:21:32,078 - data.live_data_loader - INFO - Installing scikit-learn...
+2025-07-23 09:21:32,308 - data.live_data_loader - WARNING - Failed to install scikit-learn: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'scikit-learn']' returned non-zero exit status 1.
+2025-07-23 09:21:32,308 - data.live_data_loader - INFO - Installing tensorflow...
+2025-07-23 09:21:32,537 - data.live_data_loader - WARNING - Failed to install tensorflow: Command '['/usr/bin/python3', '-m', 'pip', 'install', 'tensorflow']' returned non-zero exit status 1.
+2025-07-23 09:21:32,539 - data.live_data_loader - INFO - DataLoader initialized for symbol: RELIANCE.NS
+2025-07-23 09:21:32,539 - technical_analysis.advanced_indicators - INFO - Technical Analyzer initialized

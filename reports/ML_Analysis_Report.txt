@@ -1,0 +1,35 @@
+ULTIMATE MARKET AI ENGINE - ML ANALYSIS REPORT
+============================================================
+
+Symbol: RELIANCE.NS
+Timestamp: 2025-07-23 09:21:32.725787
+
+DATA ANALYSIS:
+--------------------
+
+MODEL PERFORMANCE:
+--------------------
+models_loaded: 4
+model_names: ['RandomForest', 'XGBoost', 'LightGBM', 'GradientBoosting']
+ensemble_weights: {'RandomForest': 0.0, 'XGBoost': 1.0, 'LightGBM': 0.0, 'GradientBoosting': 0.0}
+scalers_loaded: True
+
+ENSEMBLE ANALYSIS:
+--------------------
+total_models: 4
+active_models: 1
+primary_model: XGBoost
+weights: {'RandomForest': 0.0, 'XGBoost': 1.0, 'LightGBM': 0.0, 'GradientBoosting': 0.0}
+
+FINAL SUMMARY:
+--------------------
+overall_score: 4.17
+rating: NEEDS IMPROVEMENT (C)
+data_score: 0
+model_score: 10
+ensemble_score: 2.5
+execution_time: 2025-07-23 09:21:32
+symbol: RELIANCE.NS
+models_trained: 4
+features_processed: 39
+predictions_generated: 0
